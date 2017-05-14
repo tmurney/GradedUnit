@@ -22,29 +22,24 @@ import javafx.geometry.*;
 
 	public class UrBankMain extends Application{
 
-
-		private static User currentuser;
-
-
-	public static User getCurrentuser() {
-			return currentuser;
-		}
-
-	public static void setCurrentuser(User newcurrentuser) {
-			currentuser = newcurrentuser;
-		}
+		public static User user = new User();
+		public static Stage stage;
 
 
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		stage = primaryStage;
 
-		UserPane user = new UserPane();
-		Scene scene = new Scene(user, 300, 300);
-
+		UserPane userpane = new UserPane();
+		MainMenuPane menu = new MainMenuPane();
+		Scene scene = new Scene(userpane, 300, 300);
+		Scene scene2 = new Scene(menu, 900, 600);
 
 		primaryStage.setTitle("Murphy's UrBank");
 		primaryStage.setScene(scene);
+
+	
 		primaryStage.show();
 
 

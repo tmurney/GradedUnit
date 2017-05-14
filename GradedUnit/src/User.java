@@ -7,9 +7,25 @@ public class User {
 	private String firstname;
 	private String lastname;
 	private float balance;
+	private boolean isCorrect;
+	private boolean inDebt; 
 
 
+	public boolean isInDebt() {
+		return inDebt;
+	}
 
+	public void setInDebt(boolean inDebt) {
+		this.inDebt = inDebt;
+	}
+
+	public boolean isCorrect() {
+		return isCorrect;
+	}
+
+	public void setCorrect(boolean isCorrect) {
+		this.isCorrect = isCorrect;
+	}
 
 	public User(String username, String password, String firstname, String lastname, float balance) throws InputValidationException{
 		setUsername(username);
@@ -20,7 +36,9 @@ public class User {
 
 	}
 
+	public User(){
 
+	}
 
 	public String getUsername() {
 		return username;
@@ -63,9 +81,12 @@ public class User {
 	public void setBalance(float balance) throws InputValidationException{
 		this.balance = balance;
 	}
-
-
-
+	
+	
+                                                               
+	public String toString(){
+		return toString();
+	}
 
 	}
 

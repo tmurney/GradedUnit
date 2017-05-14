@@ -7,6 +7,10 @@ public class MoneyIn {
 	private Date transactiondate;
 	private String reason;
 
+	public MoneyIn(){ //Constructor that allows the class to be used globally.
+
+	}
+
 
 	public float getValue() {
 		return value;
@@ -23,12 +27,18 @@ public class MoneyIn {
 		this.transactiondate = transactiondate;
 	}
 
-	
+
 	public String getReason() {
 		return reason;
 	}
 	public void setReason(String reason) {
 		this.reason = reason;
 	}
+
+	
+	public void Transaction(User user, Float value) throws InputValidationException{
+		user.setBalance(user.getBalance() + value);
+	}
+
 
 }
